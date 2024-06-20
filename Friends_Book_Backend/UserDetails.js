@@ -9,7 +9,7 @@ const UserDetailSchema = new mongoose.Schema(
     image:String,
     gender:String,
     profession:String,
-    userType:String
+    userType:String 
     
   
   },

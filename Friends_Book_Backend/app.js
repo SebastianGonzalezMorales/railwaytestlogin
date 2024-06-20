@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const mongoUrl =
-  "mongodb+srv://thedebugarena:admin@cluster0.se0w6gk.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://sebastiangonzalez:wMaxkRh7HnAsGPAs@cluster0.hh1cajy.mongodb.net/?retryWrites=true&w=majority";
 
 const JWT_SECRET =
   "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jdsds039[]]pou89ywe";
@@ -39,10 +39,10 @@ app.post("/register", async (req, res) => {
   try {
     await User.create({
       name: name,
-      email: email,
+     email: email,
       mobile,
       password: encryptedPassword,
-      userType,
+      userType, 
     });
     res.send({ status: "ok", data: "User Created" });
   } catch (error) {
@@ -72,8 +72,8 @@ app.post("/login-user", async (req, res) => {
       return res.send({ error: "error" });
     }
   }
-});
-
+}); 
+/* 
 app.post("/userdata", async (req, res) => {
   const { token } = req.body;
   try {
@@ -129,7 +129,7 @@ app.post("/delete-user",async (req, res) => {
   
  }
 })
-
+ */
 
 
 app.listen(5001, () => {
